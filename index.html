@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrance Exam | CODEX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./favicon_io/android-chrome-512x512.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Continue Button -->
+    <button class="continue-application">
+        <div>
+            <div class="pencil"></div>
+            <div class="folder">
+                <div class="top">
+                    <svg viewBox="0 0 24 27">
+                        <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="paper"></div>
+            </div>
+        </div>
+        Take Test
+    </button>
+
+    <form id="sheetdb-form">
+        <h3>Enter your details:</h3>
+
+        <div class="error" id="errorMessage"></div>
+
+        <div class="inputBox">
+            <span class="fas"><i class="ri-user-heart-fill"></i></span>
+            <input type="text" placeholder="Name" name="data[NAME]" id="CName" required>
+        </div>
+
+        <div class="inputBox">
+            <span class="fas"><i class="ri-user-2-line"></i></span>
+            <input type="text" placeholder="Father's Name" name="data[FATHERS-NAME]" id="CFathersName" required>
+        </div>
+
+        <div class="inputBox">
+            <span class="fas"><i class="ri-graduation-cap-line"></i></span>
+            <input type="text" placeholder="Branch" name="data[BRANCH]" id="CBranch" required>
+        </div>
+
+        <div class="inputBox">
+            <span class="fas"><i class="ri-group-3-line"></i></span>
+            <input type="text" placeholder="Section" name="data[SECTION]" id="CSection" required>
+        </div>
+
+        <div class="inputBox">
+            <span class="fas"><i class="ri-id-card-line"></i></span>
+            <input type="number" placeholder="Uni-Rollno" name="data[ROLL-NO]" id="CRollNo" required>
+        </div>
+
+        <div class="inputBox">
+            <span class="fas"><i class="ri-mail-unread-line"></i></span>
+            <input type="email" placeholder="Mail-ID" name="data[EMAIL]" id="CEmail" required>
+        </div>
+
+        <div class="inputBox">
+            <span class="fas"><i class="ri-phone-line"></i></span>
+            <input type="tel" placeholder="Phone No" name="data[PHONE-NUMBER]" id="CPhoneNumber" required pattern="[0-9]{10}">
+        </div>
+
+        <center><input type="submit" value="Submit Details" class="btn"></center>
+    </form>
+
+    <div id="submissionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="submissionMessage"></p>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Info Box -->
+        <div class="infobox">
+            <div class="info-title">
+                <span>CODEX | ENTRANCE EXAM</span>
+                <h2>Important Instructions</h2>
+            </div>
+            <div class="info-list">
+                <div class="info"><strong>1. Time Limit: </strong>You have only 30 Seconds to solve each question.</div>
+                <div class="info"><strong>2. Review: </strong>Review your answers twice before submitting.</div>
+                <div class="info"><strong>3. Single Chance: </strong>No extra attempts will be provided.</div>
+                <div class="info"><strong>4. Attempt All: </strong>All questions are compulsory to submit before time runs out.</div>
+                <div class="info"><strong>5. Warning: </strong>Don't leave the page & don't try to cheat - your exam will get cancled.</div>
+                <br>
+                <div class="info"><span>Good luck fot your test &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- team CODEX 🚀</span></div>
+            </div>
+            <div class="buttons">
+                <button class="btn quit hm">Quit Test <span>X</span></button>
+                <button class="btn continue">
+                    Continue
+                    <div class="arrow-wrapper">
+                        <span class="arrow"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Box -->
+        <div class="quiz-box">
+            <header>
+                <div class="title">CODEX | ENTRANCE EXAM</div>
+                <div class="timer">
+                    <div class="time-text">Time Left</div>
+                    <div class="time-sec">20</div>
+                </div>
+            </header>
+            <div class="progress-bar"></div>
+            <section>
+                <div class="que-text">
+                    <span>What does HTML stand for?</span>
+                </div>
+                <div class="option-list">
+                    <div class="option">
+                        <span>Hyper Text Markup Language</span>
+                    </div>
+                    <div class="option">
+                        <span>Hyper Text Preprocessor</span>
+                    </div>
+                    <div class="option">
+                        <span>Hyper Text Multiple Language</span>
+                    </div>
+                    <div class="option">
+                        <span>Hyper Tool Multi Language</span>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="total-quiz">
+                    <span>
+                        <p>1</p> of <p>15</p> Questions
+                    </span>
+                </div>
+                <button class="next-btn btn continue">Next Que <span><i class="ri-arrow-right-up-line"></i></span></button>
+            </footer>
+        </div>
+
+        <!-- Result Box -->
+        <div class="result-box">
+            <div class="img">
+                <img src="https://latestsms.in/images/best-exam-memes.jpg" alt="Exam completion meme">
+            </div>
+            <div class="complete-text">
+                Congratulations 🎉 <br>You've completed the test ✌️
+            </div>
+            <div class="buttons">
+                <button class="btn home hm">Home <i class="ri-arrow-left-up-line"></i></button>
+                <button class="btn guide">Read Guides <i class="ri-book-open-line"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
